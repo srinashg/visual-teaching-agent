@@ -56,3 +56,54 @@ button:disabled { opacity: .55; cursor: not-allowed; }
 .pagination button { border: 1px solid var(--line); background: white; border-radius: 9px; padding: .6rem .8rem; }
 .empty a { color: var(--teal); font-weight: 700; }
 @media (max-width: 620px) { .nav { align-items: flex-start; flex-direction: column; padding-block: 1rem; } .nav-links { gap: 1rem; } .form-footer { align-items: stretch; flex-direction: column; } .form-footer button { width: 100%; } .answer-grid { grid-template-columns: 1fr; } }
+
+.demo-invitation { display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin-top: 2rem; padding: 1.7rem 2rem; border-radius: 18px; border: 1px solid #b9d8d0; background: #e8f4ef; }
+.demo-invitation h2 { font-size: 1.35rem; letter-spacing: -.03em; margin: .4rem 0 .25rem; }
+.demo-invitation p { color: var(--muted); margin: 0; }
+.demo-link { flex: none; color: white; background: var(--teal); border-radius: 10px; font-weight: 750; padding: .8rem 1rem; text-align: center; }
+.demo-link:hover { background: #075e58; }
+
+.walkthrough { border: 1px solid var(--line); border-radius: 22px; background: #fff; box-shadow: 0 22px 65px #12493c12; overflow: hidden; margin-top: 2.4rem; }
+.walkthrough-topline { display: flex; justify-content: space-between; gap: 1rem; padding: 1.2rem 1.8rem .9rem; font-size: .85rem; font-weight: 750; color: var(--muted); }
+.walkthrough-topline span:last-child { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--teal); }
+.walkthrough-progress { height: 5px; background: #e4efeb; }
+.walkthrough-progress span { display: block; height: 100%; background: var(--teal); transition: width .2s ease; }
+.visual-stage { background-color: #f6faf8; background-image: radial-gradient(#d9e8e2 1px, transparent 1px); background-size: 22px 22px; border-bottom: 1px solid var(--line); }
+.diagram { display: block; width: 100%; }
+.diagram-desktop { max-height: 370px; }
+.diagram-mobile { display: none; }
+.diagram-node rect { fill: #fff; stroke: #b7d4cd; stroke-width: 2; }
+.diagram-node-active rect { fill: #e2f3ed; stroke: var(--teal); stroke-width: 3; }
+.diagram-node-title { fill: var(--ink); font-size: 19px; font-weight: 750; }
+.diagram-node-detail { fill: var(--muted); font-size: 13px; }
+.diagram-request path, .diagram-response path { fill: none; stroke-width: 3; stroke-linecap: round; }
+.diagram-request path { stroke: var(--teal); }
+.diagram-response path { stroke: #4775ad; }
+.diagram-request text, .diagram-response text { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 15px; font-weight: 700; }
+.diagram-request text { fill: var(--teal); }
+.diagram-response text { fill: #355d90; }
+.walkthrough-bottom { padding: 1.7rem 1.8rem 1.8rem; display: flex; align-items: end; justify-content: space-between; gap: 2rem; }
+.walkthrough-caption { max-width: 540px; min-height: 120px; }
+.walkthrough-caption h2 { font-size: 1.5rem; letter-spacing: -.035em; margin: .3rem 0 .45rem; }
+.walkthrough-caption p { color: var(--muted); line-height: 1.65; margin: 0; }
+.walkthrough-controls { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: flex-end; flex: none; }
+.walkthrough-controls button { border-radius: 9px; padding: .7rem .9rem; font-weight: 750; min-height: 44px; }
+.walkthrough-secondary { background: white; color: var(--ink); border: 1px solid var(--line); }
+.walkthrough-secondary:hover:not(:disabled) { border-color: var(--teal); }
+.walkthrough-primary { background: var(--teal); color: white; border: 1px solid var(--teal); }
+.walkthrough-primary:hover:not(:disabled) { background: #075e58; }
+.walkthrough-controls button:focus-visible, .demo-link:focus-visible { outline: 3px solid #4775ad; outline-offset: 3px; }
+@media (max-width: 750px) {
+  .walkthrough-bottom { align-items: stretch; flex-direction: column; gap: 1.2rem; }
+  .walkthrough-caption { min-height: 0; }
+  .walkthrough-controls { justify-content: flex-start; }
+}
+@media (max-width: 620px) {
+  .demo-invitation { align-items: stretch; flex-direction: column; gap: 1rem; padding: 1.4rem; }
+  .diagram-desktop { display: none; }
+  .diagram-mobile { display: block; max-height: 460px; }
+  .walkthrough-topline { padding-inline: 1.2rem; }
+  .walkthrough-bottom { padding: 1.3rem 1.2rem; }
+  .walkthrough-controls button { flex: 1; }
+}
+@media (prefers-reduced-motion: reduce) { .walkthrough-progress span { transition: none; } }

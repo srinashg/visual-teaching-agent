@@ -18,5 +18,6 @@ The API uses Anthropic's Claude Haiku as the temporary text provider, matching t
 - `GET /api/explanations` returns newest first with zero-based pagination.
 - `GET /api/explanations/{id}` returns one saved explanation.
 - Next.js forwards browser requests to FastAPI through same-origin route handlers.
+- `/demo/rest-api` offers a hand-authored, step-by-step visual walkthrough with Next, Back, and Restart controls. It runs in the UI without an API key or database.
 
-The source project remains at [AI Study Assistant](https://github.com/srinashg/ai-study-assistant). Its RAG uploads, tools, pgvector, and final visual command schema have not been migrated yet.
+The source project remains at [AI Study Assistant](https://github.com/srinashg/ai-study-assistant). Its RAG uploads, tools, pgvector, and final visual command schema have not been migrated yet. The walkthrough data is a UI prototype, not the final AI output format.
